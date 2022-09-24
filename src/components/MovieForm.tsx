@@ -27,9 +27,15 @@ export default function MovieForm({
 
   return (
     <div className="container text-center my-4">
-      <h2>Get information of any movie</h2>
+      <div className="text-center mb-4">
+        <h2>Get information of any movie</h2>
+        <h5 className=" container m-auto fw-light">
+          Find out a bunch of curious informations about any movie you like. You
+          can also favorite the films you like the most
+        </h5>
+      </div>
       <form
-        className=" d-sm-flex m-auto needs-validation align-items-center "
+        className=" d-sm-flex needs-validation align-items-center "
         onSubmit={handleButtonClick}
       >
         <input
