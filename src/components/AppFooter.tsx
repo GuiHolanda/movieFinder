@@ -1,50 +1,46 @@
-import React from 'react';
-
-const fopterLinks: string[] = ['About', 'Prive Policy', 'Licensing', 'Contact'];
-
 export default function AppFooter() {
   return (
     <footer className="bg-dark text-white">
-      <div className="d-sm-flex container text-center justify-content-center justify-content-md-around">
+      <div className="d-flex flex-column align-items-center flex-sm-row mx-sm-3 justify-content-sm-between p-1">
         <a
           href="#"
-          className="d-flex container text-center align-items-center  p-2 text-light"
+          className="d-flex navbar-brand align-items-center text-light"
         >
-          <i className="bi bi-film fs-4 m-auto">
-            <span className="fw-light fs-5"> Movie Finder App</span>
-          </i>
+          <i className="bi bi-film footerFont me-2"></i>
+          <h3 className="m-0 footerFont fst-italic">Movie Finder</h3>
         </a>
-        <div className="container px-4 py-2 pb-0">
-          <section className="mb-2">
-            <a
-              className="btn btn-outline-light btn-floating m-1"
-              href="#!"
-              role="button"
-            >
-              <i className="bi bi-instagram"></i>
-            </a>
-            <a
-              className="btn btn-outline-light btn-floating m-1"
-              href="#!"
-              role="button"
-            >
-              <i className="bi bi-linkedin"></i>
-            </a>
-            <a
-              className="btn btn-outline-light btn-floating m-1"
-              href="#!"
-              role="button"
-            >
-              <i className="bi bi-github"></i>
-            </a>
-          </section>
+        <div>
+          <a
+            className="btn btn-dark btn-floating me-1"
+            href="https://www.instagram.com/guilhermee_holanda/"
+            target={'_blank'}
+            role="button"
+          >
+            <i className="bi bi-instagram footerFont"></i>
+          </a>
+          <a
+            className="btn btn-dark me-1"
+            href="https://www.linkedin.com/in/guilherme-holanda-18550a13b/"
+            target={'_blank'}
+            role="button"
+          >
+            <i className="bi bi-linkedin  footerFont"></i>
+          </a>
+          <a
+            className="btn btn-dark btn-floating me-1"
+            href="https://github.com/GuiHolanda"
+            target={'_blank'}
+            role="button"
+          >
+            <i className="bi bi-github  footerFont"></i>
+          </a>
         </div>
       </div>
 
       <div className=" copy text-center p-3">
         © 2020 Copyright:{' '}
-        <a className="text-white" href="https://mdbootstrap.com/">
-          Movie Finder App
+        <a className="text-white" href="/">
+          Movie Finder
         </a>
       </div>
     </footer>

@@ -1,16 +1,23 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import AppFooter from '../components/AppFooter';
+import { listContext } from '../helpers/AppContexts';
+import { IMovie } from '../helpers/httpsService';
 import NavBar from './NavBar';
+import '../styles/custom.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const Layout = () => {
+const favoriteList: IMovie[] = [];
+
+function Layout() {
   return (
-    <div className="app">
-      <NavBar />
-      <Outlet />
-      <AppFooter />
-    </div>
+    <listContext.Provider value={{ favoriteList }}>
+      <div className="app">
+        <NavBar />
+        <Outlet />
+        <AppFooter />
+      </div>
+    </listContext.Provider>
   );
-};
+}
 
 export default Layout;

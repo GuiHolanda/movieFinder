@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
+import { IMovie } from './httpsService';
+
+export interface IFavoriteItem {
+  Poster: string;
+  Title: String;
+}
 
 export interface IFavoritListContext {
-  favoriteList: string[];
-  pushFunction: () => void;
+  favoriteList: IMovie[];
 }
 
 export const listContext = React.createContext<IFavoritListContext>({
   favoriteList: [],
-  pushFunction: () => {},
 });
 
 export function useListContext() {

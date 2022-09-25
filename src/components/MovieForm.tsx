@@ -28,21 +28,21 @@ export default function MovieForm({
   return (
     <div className="container text-center my-4">
       <div className="text-center mb-4">
-        <h2>Get information of any movie</h2>
-        <h5 className=" container m-auto fw-light">
+        <h2 className="title">Get information of any movie</h2>
+        <h5 className="footerFont info m-auto fw-light">
           Find out a bunch of curious informations about any movie you like. You
           can also favorite the films you like the most
         </h5>
       </div>
       <form
-        className=" d-sm-flex needs-validation align-items-center "
+        className="d-sm-flex m-auto info needs-validation "
         onSubmit={handleButtonClick}
       >
         <input
           onChange={handleInputChange}
           autoFocus
           value={movie}
-          className="form-control mb-3 mb-sm-0"
+          className="form-control smallFont mb-3 mb-sm-0"
           type="text"
           name="movieInput"
           id="movieInput"
@@ -50,9 +50,9 @@ export default function MovieForm({
           required
         />
         <div className="ms-3 d-flex justify-content-center">
-          <button className="btn btn-danger ms-0">Search</button>
+          <button className="btn btn-danger smallFont me-2">Search</button>
           <button
-            className="btn btn-danger"
+            className="btn smallFont btn-danger"
             type="button"
             onClick={handleResetButtonClick}
           >

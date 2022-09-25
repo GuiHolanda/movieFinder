@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;1,400&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10929,69 +10930,75 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
 .app {
   height: 100vh;
+  font-family: "Montserrat", sans-serif;
   display: grid;
   grid-template-columns: 1fr;
   overflow: auto;
   grid-template-rows: auto auto 1fr auto;
   grid-template-areas: "header" "section" "main" "footer";
 }
-
-.app > header {
+.app header {
   grid-area: header;
 }
-
-.app > main {
+.app main {
   grid-area: main;
   padding: 15px 5px 10px 5px;
 }
-
-.app > footer {
+.app footer {
   grid-area: footer;
 }
+.app a {
+  text-decoration: none;
+}
+.app p,
+.app ul,
+.app li {
+  padding: 0;
+  margin: 0;
+}
+.app li {
+  list-style: none;
+}
 
-button {
-  margin-right: 8px;
-  margin-left: 16px;
+.title {
+  font-size: 16px;
+}
+
+.footerFont {
+  font-size: 12px;
+}
+
+.smallFont {
+  font-size: 10px;
 }
 
 .contentCard {
-  max-width: 1000px;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-p {
-  margin-bottom: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  max-width: 1250px;
 }
 
 .copy {
   background-color: rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
+.info {
+  max-width: 600px;
+}
+
+.favList {
+  max-width: 300px;
+}
+
+@media (min-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
+  .footerFont {
+    font-size: 1rem;
+  }
+  .smallFont {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=custom.css.map */

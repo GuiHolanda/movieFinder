@@ -11,6 +11,7 @@ export interface IMovie {
   Director: string;
   Writer: string;
   Response: boolean;
+  imdbRating: string;
 }
 
 export interface IError {

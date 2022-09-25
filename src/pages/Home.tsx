@@ -1,13 +1,8 @@
-import AppFooter from '../components/AppFooter';
 import getMovie, { IError, IMovie } from '../helpers/httpsService';
 import { useEffect, useState } from 'react';
 import MovieNotFound from '../components/MovieNotFound';
-import { listContext } from '../helpers/AppContexts';
 import MovieForm from '../components/MovieForm';
 import Content from '../components/Content';
-import { instaceOfIMovie } from '../helpers/helperFunctions';
-
-const favoriteList: string[] = [];
 
 function App() {
   const [movieTitle, setMovieTitle] = useState('');
@@ -24,21 +19,17 @@ function App() {
     setMovieTitle(movie);
   }
 
-  function pushFunction() {
-    if (instaceOfIMovie(movieData)) {
-      favoriteList.push(movieData.Title);
-    }
-  }
-
   return (
-    <listContext.Provider value={{ favoriteList, pushFunction }}>
+    <>
       <MovieForm
         onSubmitMovie={(movie: string) => handleSearchClick(movie)}
         onResetSearch={(movie: string) => handleSearchClick(movie)}
       />
       {movieData.Response === 'True' && <Content movie={movieData} />}
-      {movieData.Response === 'False' && movieTitle !== '' && <MovieNotFound />}
-    </listContext.Provider>
+      {movieData.Response === 'False' && movieTitle !== '' && (
+        <MovieNotFound> Movie not found, try another title.</MovieNotFound>
+      )}
+    </>
   );
 }
 

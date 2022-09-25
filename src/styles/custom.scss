@@ -1,22 +1,11 @@
 $danger: #790a04;
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
-
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;1,400&display=swap');
 
 .app {
   height: 100vh;
+  font-family: 'Montserrat', sans-serif;
   display: grid;
   grid-template-columns: 1fr;
   overflow: auto;
@@ -26,49 +15,73 @@ $danger: #790a04;
     'section'
     'main'
     'footer';
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+    padding: 15px 5px 10px 5px;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p,
+  ul,
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+  }
 }
 
-.app > header {
-  grid-area: header;
+.title {
+  font-size: 16px;
 }
 
-.app > main {
-  grid-area: main;
-  padding: 15px 5px 10px 5px;
+.footerFont {
+  font-size: 12px;
 }
 
-.app > footer {
-  grid-area: footer;
+.smallFont {
+  font-size: 10px;
 }
 
-button {
-  margin-right: 8px;
-  margin-left: 16px;
-}
 .contentCard {
-  max-width: 1000px;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-p {
-  margin-bottom: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  max-width: 1250px;
 }
 
 .copy {
   background-color: rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
+.info {
+  max-width: 600px;
+}
+
+.favList {
+  max-width: 300px;
+}
+
+@media (min-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
+  .footerFont {
+    font-size: 1rem;
+  }
+  .smallFont {
+    font-size: 14px;
+  }
 }

@@ -1,12 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import '../styles/custom.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from 'react-router-dom';
+import UserMenu from '../components/UserMenu';
 
 function Navbar() {
   return (
     <nav className={`header navbar bg-dark`}>
-      <ul className="container-fluid">
+      <ul className=" mx-3 container-fluid justify-content-center justify-content-md-between ">
         <li>
           <Link to="/">
             {' '}
@@ -14,18 +12,13 @@ function Navbar() {
               href="#"
               className="d-flex navbar-brand align-items-center text-light"
             >
-              <i className="bi bi-film fs-1 me-4"></i>
-              <h2 className=" fw-light fst-italic">Movie Finder App</h2>
+              <i className="bi bi-film title me-4"></i>
+              <h3 className="m-0 title fst-italic">Movie Finder</h3>
             </a>
           </Link>
         </li>
         <li>
-          <Link to="/Favorites">
-            {' '}
-            <button type="button" className="btn btn-dark m-0">
-              <i className="bi bi-person-circle fs-2"></i>
-            </button>
-          </Link>
+          <UserMenu />
         </li>
       </ul>
     </nav>
