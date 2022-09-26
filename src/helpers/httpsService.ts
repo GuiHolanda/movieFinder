@@ -14,12 +14,14 @@ export interface IMovie {
   imdbRating: string;
 }
 
+const API_KEY = import.meta.env.VITE_API_KEY;
+
 export interface IError {
   Response: string;
   Error: String;
 }
 export default async function getMovie(movieTitle: string): Promise<IMovie> {
   return await fetch(
-    `http://www.omdbapi.com/?t=${movieTitle}&apikey=bdae4255&`
+    `http://www.omdbapi.com/?t=${movieTitle}&apikey=${API_KEY}&`
   ).then(resp => resp.json());
 }
