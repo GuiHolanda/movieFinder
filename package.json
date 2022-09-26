@@ -1,12 +1,9 @@
 {
-  "homepage": "http://GuiHolanda.github.io/movieFinder_v03",
   "name": "moviefinder",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
@@ -14,7 +11,6 @@
   "dependencies": {
     "bootstrap": "^5.2.1",
     "bootstrap-icons": "^1.9.1",
-    "gh-pages": "^4.0.0",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
