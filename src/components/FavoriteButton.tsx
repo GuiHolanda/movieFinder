@@ -27,10 +27,10 @@ export default function FavoriteButton({ movie }: { movie: IMovie }) {
     <button
       onClick={handleButtonClick}
       type="button"
-      className={`btn btn-outline-warning btn-sm align-self-center m-0 px-1 ${buttonStatus} btn-floating`}
+      className={`btn btn-outline-danger btn-sm align-self-center m-0 px-1 ${buttonStatus} btn-floating`}
       data-mdb-ripple-color="dark"
     >
-      <i className="bi bi-star smallFont"></i>
+      <i className="bi bi-heart"></i>
     </button>
   );
 }

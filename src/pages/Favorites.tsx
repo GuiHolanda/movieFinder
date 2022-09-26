@@ -28,7 +28,7 @@ function UncontrolledExample() {
       )}
       {favoriteList.length === 0 && (
         <MovieNotFound>
-          Sorry, you haven't added any movie to your favorite List{' '}
+          Sorry, you haven't added any movie to your favorite List
         </MovieNotFound>
       )}
     </div>
