@@ -56,7 +56,7 @@ export default function MovieForm({
             type="button"
             onClick={handleResetButtonClick}
           >
-            Reset
+            Clear
           </button>
         </div>
       </form>

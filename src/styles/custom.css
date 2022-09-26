@@ -10978,6 +10978,14 @@ textarea.form-control-lg {
   max-width: 1250px;
 }
 
+.sugestedCard {
+  max-width: 200px;
+  max-height: 350px;
+}
+.sugestedCard a {
+  color: black;
+}
+
 .copy {
   background-color: rgba(0, 0, 0, 0.2);
   font-size: 12px;

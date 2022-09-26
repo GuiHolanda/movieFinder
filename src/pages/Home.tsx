@@ -3,6 +3,7 @@ import { useState } from 'react';
 import MovieNotFound from '../components/MovieNotFound';
 import MovieForm from '../components/MovieForm';
 import Content from '../components/Content';
+import Sugested from '../components/Sugested';
 
 function App() {
   const [movieData, setMovieData] = useState<IMovie | IError>({
@@ -18,7 +19,6 @@ function App() {
         })
       : getMovie(movie).then(setMovieData);
   }
-  console.log(movieData);
 
   return (
     <>
@@ -30,6 +30,7 @@ function App() {
       {movieData.Response === 'False' && (
         <MovieNotFound> Movie not found, try another title.</MovieNotFound>
       )}
+      {movieData.Response === '' && <Sugested />}
     </>
   );
 }
